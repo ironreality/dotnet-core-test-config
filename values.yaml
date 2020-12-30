@@ -1,2 +1,4 @@
 dotnetcoretest:
   enabled: false
+dotnetcoretest-generated:
+  enabled: false
