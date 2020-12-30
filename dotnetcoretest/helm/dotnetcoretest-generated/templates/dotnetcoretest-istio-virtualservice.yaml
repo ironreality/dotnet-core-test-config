@@ -14,6 +14,6 @@ spec:
   - route:
     - destination:
         host: dotnetcoretest-canary.dotnetcoretest-production.svc.cluster.local
-      weight: 100
     - destination:
         host: dotnetcoretest-primary.dotnetcoretest-production.svc.cluster.local
+      weight: 100
