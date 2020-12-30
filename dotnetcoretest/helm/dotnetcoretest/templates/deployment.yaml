@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnetcoretest
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: dotnetcoretest
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dotnetcoretest
+  template:
+    metadata:
+      labels:
+        app: dotnetcoretest
+    spec:
+      tolerations:
+      - key: os-type
+        operator: Equal
+        value: windows
+        effect: NoSchedule
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image }}
+          imagePullPolicy: Always
+          livenessProbe:
+              httpGet:
+                path: /healthz
+                port: 80
