@@ -1,2 +1,2 @@
-image: ironreality/dotnet-core-test:0.0.2
+image: ironreality/dotnet-core-test:0.0.1
 replicaCount: 1
