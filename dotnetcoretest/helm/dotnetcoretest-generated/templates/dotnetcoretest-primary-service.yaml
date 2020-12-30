@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dotnetcoretest
+  name: dotnetcoretest-primary
+spec:
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: dotnetcoretest-primary
+  type: LoadBalancer
+status:
+  loadBalancer: {}
