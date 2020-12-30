@@ -18,7 +18,7 @@ spec:
         app: dotnetcoretest-primary
     spec:
       containers:
-      - image: ironreality/dotnet-core-test:0.0.1
+      - image: ironreality/dotnet-core-test:0.0.2
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
