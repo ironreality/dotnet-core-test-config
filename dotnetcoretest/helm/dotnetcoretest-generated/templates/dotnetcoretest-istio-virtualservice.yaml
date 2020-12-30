@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  creationTimestamp: null
+  name: dotnetcoretest
+spec:
+  gateways:
+  - public-gateway.istio-system
+  - mesh
+  hosts:
+  - dotnetcoretest.dotnetcoretest-qa.35.180.11.28.nip.io
+  - dotnetcoretest
+  http:
+  - route:
+    - destination:
+        host: dotnetcoretest.dotnetcoretest-qa.svc.cluster.local
