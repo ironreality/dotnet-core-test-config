@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  creationTimestamp: null
+  name: dotnetcoretest-canary
+spec:
+  host: dotnetcoretest-canary.dotnetcoretest-production.svc.cluster.local
